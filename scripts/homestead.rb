@@ -262,5 +262,14 @@ class Homestead
         ]
       end
     end
+
+    # Install Java
+    if settings.has_key?("java")
+        config.vm.provision "shell" do |s|
+          s.name = "Installing Java"
+          s.path = scriptDir + "/install-java.sh"
+        end
+    end
+
   end
 end
