@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 worker="[program:worker-1]
-command=php /home/vagrant/app/surplace/artisan queue:work beanstalkd --sleep=10 --daemon --quiet --env=production --queue="default"
+command=php /home/vagrant/app/ra/artisan queue:work beanstalkd --sleep=10 --daemon --quiet --env=production --queue="default"
 
 autostart=true
 autorestart=true
