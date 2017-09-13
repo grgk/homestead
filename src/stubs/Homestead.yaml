@@ -20,6 +20,8 @@ sites:
 databases:
     - homestead
 
+# firefox: 1
+
 # blackfire:
 #     - id: foo
 #       token: bar

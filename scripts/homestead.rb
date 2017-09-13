@@ -207,6 +207,14 @@ class Homestead
         s.path = scriptDir + "/install-maria.sh"
       end
     end
+    
+    
+    # Install Firefox and Xvfb If Necessary
+    if settings.has_key?("firefox") && settings["firefox"]
+      config.vm.provision "shell" do |s|
+        s.path = scriptDir + "/install-firefox.sh"
+      end
+    end
 
 
     # Configure All Of The Configured Databases
