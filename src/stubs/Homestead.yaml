@@ -1,17 +1,19 @@
 ---
 ip: "192.168.10.10"
 memory: 2048
-cpus: 1
-provider: virtualbox
+cpus: 2
+# provider: virtualbox
+provider: hyperv
+box: "kreator/homestead"
 
 authorize: ~/.ssh/id_rsa.pub
 
 keys:
     - ~/.ssh/id_rsa
 
-folders:
-    - map: ~/Code
-      to: /home/vagrant/Code
+# folders:
+#    - map: ~/Code
+#      to: /home/vagrant/Code
 
 sites:
     - map: homestead.app
