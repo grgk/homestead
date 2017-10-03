@@ -10,6 +10,6 @@ fi
 touch /home/vagrant/.firefox
 
 apt-get update
-apt-get install xvfb firefox
+apt-get -y install xvfb firefox
 echo "Xvfb :99 &" >> /home/vagrant/.profile
 echo "export DISPLAY=:99" >> /home/vagrant/.profile
