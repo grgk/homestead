@@ -1,0 +1,39 @@
+---
+memory: 1024
+cpus: 1
+provider: hyperv
+box: "kreator/homestead"
+
+authorize: ~/.ssh/id_rsa.pub
+
+keys:
+    - ~/.ssh/id_rsa
+
+folders:
+   - map: ../
+     to: /home/vagrant/app
+
+sites:
+    - map: vagrant.app
+      to: /home/vagrant/app
+#    - map: laravel.app
+#      to: /home/vagrant/app/laravel
+#      schedule: true
+
+databases:
+    - homestead
+    
+firefox: 1
+
+# blackfire:
+#     - id: foo
+#       token: bar
+#       client-id: foo
+#       client-token: bar
+
+# ports:
+#     - send: 50000
+#       to: 5000
+#     - send: 7777
+#       to: 777
+#       protocol: udp
